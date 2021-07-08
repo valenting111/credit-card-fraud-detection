@@ -1,7 +1,7 @@
 import requests
 import json
 
-root_url = "http://127.0.0.1:8000/"
+root_url = "http://localhost:8000/"
 
 test_input_fraud = {"features": {'Time': 472.0,
                                  'V1': -3.0435406239976,
@@ -44,12 +44,12 @@ response_body2 = requests.get(root_url + "testing_out_stuff/val111/24")
 
 print(response_body2.text)
 
-response_body3 = requests.post(root_url + "predict", json=test_input_fraud)
+response_body3 = requests.post(root_url + "/predict", json=test_input_fraud)
 
 print(response_body3.text)
 
 with open('test_data.json') as json_file:
     data = json.load(json_file)
 
-response_body4 = requests.post(root_url + "predict", json=data)
+response_body4 = requests.post(root_url + "/predict", json=data)
 print(response_body4.text)
