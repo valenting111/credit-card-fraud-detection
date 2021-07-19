@@ -6,7 +6,7 @@ Building and deploying a credit card fraud detection ML algorithm
 The dataset used is available at https://www.kaggle.com/mlg-ulb/creditcardfraud. It is a table containing credit card transactions, classified as fraudulent or valid transactions. The features are the result of PCA applied to raw user information that we do not have access to, together with the Amount of the transactions and the Time elapsed since the first transaction in the dataset. There are 284807 data samples in total.
 
 ### Challenge
-The difficulties when tackling a fraud detection task is the unavailability of a lot of fraud examples (huge class imbalance). This means that more elaborate metrics need to be used (precision, recall, f1 score, confusion matrix) together with advanced classification techniques.
+The difficulties when tackling a fraud detection task is the unavailability of a lot of fraud examples (huge class imbalance). This means that more elaborate metrics need to be used (precision, recall, average accurach, f1 score, confusion matrix) together with advanced classification techniques.
 
 ### Models tested
 Several models are tested.
@@ -16,7 +16,6 @@ The algorithms are:
 - Support Vector Machines
 - Gaussian Mixture Model
 - Isolation Forest
-- Local Outlier Factor
 
 ### Deployment
 The best model is then deployed as an app using the FastAPI library. The app is containerized using Docker and is made available globally using Google Cloud Platform.

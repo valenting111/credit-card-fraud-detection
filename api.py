@@ -8,7 +8,7 @@ import os
 
 app = FastAPI()
 
-trained_svc = load("svc.joblib")
+trained_svc = load("best_model.joblib")
 
 
 class NewRequest(BaseModel):
